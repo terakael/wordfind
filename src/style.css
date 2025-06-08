@@ -88,7 +88,6 @@ button {
     color: white;
 }
 
-/* Overlays */
 .overlay {
     position: fixed;
     top: 0;
@@ -100,7 +99,6 @@ button {
     justify-content: center;
 }
 
-/* Size Dialog Styles */
 #size-dialog {
     position: fixed;
     top: 0;
@@ -124,7 +122,6 @@ button {
     text-align: center;
 }
 
-/* Other Overlays */
 #word-list-overlay,
 #congrats-screen {
     position: fixed;
@@ -243,7 +240,6 @@ button {
     background-color: #f44336;
 }
 
-/* Size Dialog Styles */
 .size-options {
     display: flex;
     flex-direction: column;
