@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const playAgainBtn = document.getElementById('play-again-btn');
     const sizeDialog = document.getElementById('size-dialog');
     const sizeButtons = document.querySelectorAll('.size-btn');
+    const changeSizeBtn = document.getElementById('change-size-btn');
 
     // --- EVENT LISTENERS ---
     toggleWordsBtn.addEventListener('click', () => {
@@ -262,10 +263,10 @@ document.addEventListener('DOMContentLoaded', () => {
         initGame();
     });
 
+    changeSizeBtn.addEventListener('click', () => {
+        sizeDialog.classList.remove('hidden');
+    });
+
     // --- START THE GAME ---
-    console.log('Showing size selection dialog');
-    console.log('Dialog element exists:', !!sizeDialog);
-    console.log('Initial dialog classes:', sizeDialog.classList);
-    sizeDialog.classList.remove('hidden');
-    console.log('Dialog classes after remove:', sizeDialog.classList);
+    initGame();
 });
