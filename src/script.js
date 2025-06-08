@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
         wordListOverlay.classList.add('hidden');
 
         // Select and place words
-        selectWordsForPuzzle();
+        selectWordsForPuzzle(size);
         placeWordsInGrid(size);
         fillEmptyCells(size);
 
@@ -80,9 +80,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- WORD SELECTION & PLACEMENT ---
-    function selectWordsForPuzzle() {
+    function selectWordsForPuzzle(size) {
         let availableWords = [...allWords];
-        for (let i = 0; i < 3; i++) { // Select 3 words for the puzzle
+        const wordCount = Math.max(3, Math.floor(size * 0.6));
+        for (let i = 0; i < wordCount; i++) {
             if (availableWords.length === 0) break;
             const randomIndex = Math.floor(Math.random() * availableWords.length);
             wordsToFind.push(availableWords.splice(randomIndex, 1)[0]);
