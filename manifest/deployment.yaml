@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wordfind
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: wordfind
+  template:
+    metadata:
+      labels:
+        app: wordfind
+    spec:
+      containers:
+        - name: wordfind
+          image: docker.io/terakael/pklwhx:20250609_01
+          ports:
+            - containerPort: 80

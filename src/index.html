@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Word Find</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="game-container">
+        <div id="game-grid"></div>
+    </div>
+
+    <div id="controls">
+        <button id="toggle-words-btn">Show Words</button>
+    </div>
+
+    <!-- Size Selection Dialog -->
+    <div id="size-dialog" class="hidden">
+        <div class="overlay-content">
+            <h2>Select Grid Size</h2>
+            <div class="size-options">
+                <button class="size-btn" data-size="6">Small (6x6)</button>
+                <button class="size-btn" data-size="9">Medium (9x9)</button>
+                <button class="size-btn" data-size="12">Large (12x12)</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hidden Overlay for the Word List -->
+    <div id="word-list-overlay" class="hidden">
+        <div class="overlay-content">
+            <h2>Words to Find</h2>
+            <ul id="word-list"></ul>
+            <button id="close-overlay-btn">Close</button>
+        </div>
+    </div>
+
+    <!-- Hidden Overlay for Congratulations -->
+    <div id="congrats-screen" class="hidden">
+        <div class="overlay-content">
+            <h2>Congratulations!</h2>
+            <p>You found all the words!</p>
+            <button id="play-again-btn">Play Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
